@@ -1,6 +1,6 @@
 # Firebase Authentication
 
-**Basic template to build iOS app using Firebase Authentication services.**
+**Starter template to build iOS app using Firebase Authentication services.**
 
 </br>
 </br>
