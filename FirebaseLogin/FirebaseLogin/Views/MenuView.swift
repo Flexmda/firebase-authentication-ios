@@ -9,44 +9,42 @@ import SwiftUI
 
 struct MenuView: View {
     @Binding var showingMenu: Bool
-    let deviceId: String // Paramentro esperado
-
+    var deviceId: String
+    
+    @State private var navigateToRouteMap = false // Control de navegación a RouteMapView
+    
     var body: some View {
         NavigationView {
-            VStack(alignment: .leading) {
+            List {
                 Button(action: {
-                    // Acción para cerrar sesión
-                    print("Cerrar sesión")
+                    // Lógica para ver las rutas
+                    navigateToRouteMap = true
                 }) {
-                    Text("Cerrar sesión")
-                        .font(.headline)
-                        .padding()
+                    Text("Ver Rutas")
                 }
+                .background(
+                    NavigationLink(destination: RouteMapView(deviceId: deviceId), isActive: $navigateToRouteMap) {
+                        EmptyView()
+                    }
+                )
                 
                 Button(action: {
-                    // Acción para ir al mapa
-                    print("Ir al mapa")
-                    showingMenu = false // Ocultar menú al navegar
+                    // Cerrar sesión
+                    FirebaseLoginViewModel().signOut()
+                    showingMenu = false // Ocultar el menú al cerrar sesión
                 }) {
-                    Text("Ir al mapa")
-                        .font(.headline)
-                        .padding()
+                    Text("Cerrar Sesión")
                 }
-                
-                Button(action: {
-                    // Acción para ver rutas
-                    print("Ver rutas")
-                    showingMenu = false // Ocultar menú al navegar
-                }) {
-                    Text("Ver rutas")
-                        .font(.headline)
-                        .padding()
-                }
-                
-                Spacer()
+                .foregroundColor(.red)
             }
-            .navigationBarTitle("Menú", displayMode: .inline)
+            .navigationTitle("Menú")
         }
+    }
+}
+
+struct MenuView_Previews: PreviewProvider {
+    static var previews: some View {
+        MenuView(showingMenu: .constant(true), deviceId: "device123")
     }
 }
 
