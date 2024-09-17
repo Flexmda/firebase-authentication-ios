@@ -18,7 +18,7 @@ struct SignInView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 32) {
             Spacer()
-            Text("Welcome\nback!")
+            Text("Wenas\nmi amor!")
                 .multilineTextAlignment(.leading)
                 .font(.largeTitle)
                 .fontWeight(.black)
@@ -30,7 +30,7 @@ struct SignInView: View {
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color(.systemGray6), ignoresSafeAreaEdges: .all)
-        .navigationTitle("Back to Login")
+        .navigationTitle("Regresa al ingreso")
         .toolbar(.hidden, for: .navigationBar)
     }
 }
@@ -51,7 +51,7 @@ extension SignInView {
             VStack(alignment: .leading) {
                 Text("Email")
                     .font(.caption2)
-                TextField("example@mailprovider.suffix", text: $mail)
+                TextField("amordemivida@gmail.com", text: $mail)
             }
             .modifier(InputField())
             .padding(.bottom, 4)
@@ -59,7 +59,7 @@ extension SignInView {
             VStack(alignment: .leading) {
                 HStack {
                     VStack(alignment: .leading) {
-                        Text("Password")
+                        Text("Contraseña")
                             .font(.caption2)
                         if showPassword {
                             // * show password
@@ -89,7 +89,7 @@ extension SignInView {
                 vm.signIn(email: mail, password: password)
                 
             } label: {
-                Text("Login".uppercased())
+                Text("Ingresa".uppercased())
                     .modifier(OnButtonText())
             }
             .modifier(LargeButton())
@@ -99,8 +99,8 @@ extension SignInView {
     @ViewBuilder
     func SignUpLink() -> some View {
         HStack {
-            Text("New on the app?")
-            NavigationLink("Sign-up now!", destination: SignUpView())
+            Text("Primera vez?")
+            NavigationLink("Regístrese amor!", destination: SignUpView())
         }
     }
 }

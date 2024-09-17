@@ -18,7 +18,7 @@ struct SignUpView: View {
     var body: some View {
         VStack(alignment: .trailing, spacing: 32) {
             Spacer()
-            Text("Register\nnow!")
+            Text("Regístrate\nmi amor!")
                 .multilineTextAlignment(.trailing)
                 .font(.largeTitle)
                 .fontWeight(.black)
@@ -49,7 +49,7 @@ extension SignUpView {
             VStack(alignment: .leading) {
                 Text("Email")
                     .font(.caption2)
-                TextField("example@mailprovider.suffix", text: $mail)
+                TextField("aquivasucorreo.com", text: $mail)
             }
             .modifier(InputField())
             .padding(.bottom, 4)
@@ -57,7 +57,7 @@ extension SignUpView {
             VStack(alignment: .leading) {
                 HStack {
                     VStack(alignment: .leading) {
-                        Text("Password")
+                        Text("Su contraseña")
                             .font(.caption2)
                         if showPassword {
                             // * show password
@@ -87,7 +87,7 @@ extension SignUpView {
                 vm.signUp(email: mail, password: password)
                 
             } label: {
-                Text("Create account".uppercased())
+                Text("Crear una cuenta".uppercased())
                     .modifier(OnButtonText())
             }
             .modifier(LargeButton())

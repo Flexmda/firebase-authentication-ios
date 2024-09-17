@@ -2,22 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>CLIENT_ID</key>
-	<string>1045725080839-h447j7jhtplaseadppg8tjo0l8nuefki.apps.googleusercontent.com</string>
-	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.1045725080839-h447j7jhtplaseadppg8tjo0l8nuefki</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDBXtCcXEKx6CCnwOr36NGdjQllRwNt7hY</string>
+	<string>AIzaSyBjChrGJJD6W1ZXnyOkUNZfdIht9fIOg8M</string>
 	<key>GCM_SENDER_ID</key>
-	<string>1045725080839</string>
+	<string>190174296802</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.gperretta.FirebaseLogin</string>
+	<string>com.flexmda.tracemeapp</string>
 	<key>PROJECT_ID</key>
-	<string>fir-login-76cd3</string>
+	<string>locationtracker-d5d7d</string>
 	<key>STORAGE_BUCKET</key>
-	<string>fir-login-76cd3.appspot.com</string>
+	<string>locationtracker-d5d7d.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1045725080839:ios:54b79b61ab899c6f3869a2</string>
+	<string>1:190174296802:ios:368203cbf1e9e6c558bcbb</string>
 </dict>
 </plist>
