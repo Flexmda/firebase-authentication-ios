@@ -20,6 +20,7 @@
 		3AC8B34429A77A230063A7AA /* FirebaseLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC8B34329A77A230063A7AA /* FirebaseLoginViewModel.swift */; };
 		3AC8B34629A77CF90063A7AA /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC8B34529A77CF90063A7AA /* SignInView.swift */; };
 		3AC8B34829A780AC0063A7AA /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC8B34729A780AC0063A7AA /* SignUpView.swift */; };
+		82B2CFF42C99462C00B58298 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B2CFF32C99462C00B58298 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		3AC8B34529A77CF90063A7AA /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		3AC8B34729A780AC0063A7AA /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		612FE18CE81965874451C7FC /* Pods-FirebaseLogin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseLogin.release.xcconfig"; path = "Target Support Files/Pods-FirebaseLogin/Pods-FirebaseLogin.release.xcconfig"; sourceTree = "<group>"; };
+		82B2CFF32C99462C00B58298 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		8812691EE58B4F10C4D8E89C /* Pods_FirebaseLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseLogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -66,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				3AA2E12029A76F0A00ACCB5B /* ContentView.swift */,
+				82B2CFF32C99462C00B58298 /* MapView.swift */,
 				3AC8B34529A77CF90063A7AA /* SignInView.swift */,
 				3AC8B34729A780AC0063A7AA /* SignUpView.swift */,
 				3A9284BA29B3AA2A00442B5B /* Components */,
@@ -128,7 +131,6 @@
 				2CA711B58E7AA8F2B15F5FC5 /* Pods-FirebaseLogin.debug.xcconfig */,
 				612FE18CE81965874451C7FC /* Pods-FirebaseLogin.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -263,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A9284B929B3AA2600442B5B /* ButtonModifier.swift in Sources */,
+				82B2CFF42C99462C00B58298 /* MapView.swift in Sources */,
 				3AA2E12129A76F0A00ACCB5B /* ContentView.swift in Sources */,
 				3AC8B34829A780AC0063A7AA /* SignUpView.swift in Sources */,
 				3AA2E11F29A76F0A00ACCB5B /* FirebaseLoginApp.swift in Sources */,
@@ -402,7 +405,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FirebaseLogin/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Firebase Auth";
+				INFOPLIST_KEY_CFBundleDisplayName = "TraceMe App";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -434,7 +437,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FirebaseLogin/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Firebase Auth";
+				INFOPLIST_KEY_CFBundleDisplayName = "TraceMe App";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

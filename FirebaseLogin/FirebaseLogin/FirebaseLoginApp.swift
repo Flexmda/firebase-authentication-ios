@@ -5,12 +5,13 @@
 //  Created by Gilda on 23/02/23.
 //
 
-import SwiftUI
 import FirebaseCore
+import GoogleMaps
+import SwiftUI
 
 @main
 struct FirebaseLoginApp: App {
-    // register app delegate for Firebase setup
+    // Register app delegate for Firebase setup
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
     var body: some Scene {
@@ -22,13 +23,15 @@ struct FirebaseLoginApp: App {
     }
 }
 
-
 class AppDelegate: NSObject, UIApplicationDelegate {
-  func application(_ application: UIApplication,
-                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-      // Firebase configuration
-      FirebaseApp.configure()
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
+        // Inicializa Firebase
+        FirebaseApp.configure()
+        
+        // Inicializa Google Maps con tu API Key
+        GMSServices.provideAPIKey("AIzaSyBI9YpWExtU377q9tCUB5nVOJqrV59-1lM")
 
-    return true
-  }
+        return true
+    }
 }

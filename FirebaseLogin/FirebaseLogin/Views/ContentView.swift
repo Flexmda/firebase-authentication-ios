@@ -8,35 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var vm : FirebaseLoginViewModel
-    
+    @EnvironmentObject var vm: FirebaseLoginViewModel
+
     var body: some View {
         NavigationView {
             if vm.signedIn {
-                VStack(spacing: 32){
-                    /// Put here your app main view for logged users!
-                    Text("You are now\nsigned in!")
-                        .multilineTextAlignment(.center)
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                    /// Providing the 'logout' button
-                    Button {
-                        vm.signOut()
-                    } label: {
-                        Text("Logout".uppercased())
-                            .modifier(OnButtonText())
-                    }
-                    .modifier(LargeButton())
-                }
-                .padding()
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(Color(.systemGray6), ignoresSafeAreaEdges: .all)
+                // Mostrar el mapa después de iniciar sesión
+                MapView()
+                    .edgesIgnoringSafeArea(.all) // Para que el mapa ocupe toda la pantalla
             } else {
+                // Si no está logueado, muestra la pantalla de inicio de sesión
                 SignInView()
             }
         }
-        .tint(.orange)
-        .onAppear{
+        .onAppear {
             vm.signedIn = vm.isSignedIn
         }
     }
