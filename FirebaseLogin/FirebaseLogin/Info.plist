@@ -2,16 +2,32 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>CFBundleURLTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>com.googleusercontent.apps.1045725080839-h447j7jhtplaseadppg8tjo0l8nuefki</string>
-			</array>
-		</dict>
-	</array>
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleTypeRole</key>
+            <string>Editor</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>com.googleusercontent.apps.1045725080839-h447j7jhtplaseadppg8tjo0l8nuefki</string>
+            </array>
+        </dict>
+    </array>
+
+    <!-- Permisos de ubicación -->
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Esta aplicación necesita acceso a tu ubicación para mostrar el mapa y rastrear tu ubicación en tiempo real.</string>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>Esta aplicación necesita acceso a tu ubicación en segundo plano para rastrear tu ubicación en todo momento.</string>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>Esta aplicación necesita acceso a tu ubicación incluso cuando no está activa.</string>
+
+    <!-- Permisos para ejecutar la app en segundo plano -->
+    <key>UIBackgroundModes</key>
+    <array>
+        <string>location</string>
+        <string>fetch</string> <!-- Permite la actualización de la ubicación en segundo plano -->
+    </array>
 </dict>
 </plist>
+

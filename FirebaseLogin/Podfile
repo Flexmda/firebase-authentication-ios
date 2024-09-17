@@ -1,12 +1,30 @@
-# Uncomment the next line to define a global platform for your project
-platform :ios, '12.0'  # Puedes cambiar '12.0' por una versión mínima compatible
+# Define una plataforma global
+platform :ios, '16.2'
 
 target 'FirebaseLogin' do
-  # Comment the next line if you don't want to use dynamic frameworks
+  # Usa frameworks dinámicos
   use_frameworks!
 
-  # Pods for FirebaseLogin
-  pod 'GoogleMaps'
+  # Mantén la versión más actualizada de los pods
+  # Firebase Authentication
+  pod 'Firebase/Auth'
+  
+  # Firebase Firestore
+  pod 'Firebase/Firestore'
+  
+  # Firebase Analytics (requerido por Firebase)
+  pod 'Firebase/Analytics'
+  
+  # Google Maps SDK
+  pod 'GoogleMaps', '~> 7.3' # Verifica la última versión estable compatible con tu plataforma
+end
 
+# Prevenir conflictos en la instalación de pods
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '16.2'
+    end
+  end
 end
 
