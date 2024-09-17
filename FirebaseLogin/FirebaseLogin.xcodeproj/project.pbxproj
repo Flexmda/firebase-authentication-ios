@@ -17,6 +17,8 @@
 		3AC8B34429A77A230063A7AA /* FirebaseLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC8B34329A77A230063A7AA /* FirebaseLoginViewModel.swift */; };
 		3AC8B34629A77CF90063A7AA /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC8B34529A77CF90063A7AA /* SignInView.swift */; };
 		3AC8B34829A780AC0063A7AA /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC8B34729A780AC0063A7AA /* SignUpView.swift */; };
+		828BE3EF2C9A07C900394264 /* DeviceSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828BE3EE2C9A07C600394264 /* DeviceSelectionView.swift */; };
+		828BE3F12C9A07F800394264 /* RouteMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828BE3F02C9A07F600394264 /* RouteMapView.swift */; };
 		82B2CFF42C99462C00B58298 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B2CFF32C99462C00B58298 /* MapView.swift */; };
 		82B2CFF72C9948F900B58298 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B2CFF62C9948F900B58298 /* LocationManager.swift */; };
 		F128D113E003E6A6E851A4D9 /* Pods_FirebaseLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD60EF4B54B442E0D26A162C /* Pods_FirebaseLogin.framework */; };
@@ -37,6 +39,8 @@
 		3AC8B34529A77CF90063A7AA /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		3AC8B34729A780AC0063A7AA /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		5EBA1E90AAD00DF8AB037DBC /* Pods-FirebaseLogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseLogin.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseLogin/Pods-FirebaseLogin.debug.xcconfig"; sourceTree = "<group>"; };
+		828BE3EE2C9A07C600394264 /* DeviceSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSelectionView.swift; sourceTree = "<group>"; };
+		828BE3F02C9A07F600394264 /* RouteMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteMapView.swift; sourceTree = "<group>"; };
 		82B2CFF32C99462C00B58298 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		82B2CFF62C9948F900B58298 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		CD60EF4B54B442E0D26A162C /* Pods_FirebaseLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseLogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +71,8 @@
 			children = (
 				3AA2E12029A76F0A00ACCB5B /* ContentView.swift */,
 				82B2CFF32C99462C00B58298 /* MapView.swift */,
+				828BE3EE2C9A07C600394264 /* DeviceSelectionView.swift */,
+				828BE3F02C9A07F600394264 /* RouteMapView.swift */,
 				3AC8B34529A77CF90063A7AA /* SignInView.swift */,
 				3AC8B34729A780AC0063A7AA /* SignUpView.swift */,
 				3A9284BA29B3AA2A00442B5B /* Components */,
@@ -288,9 +294,11 @@
 				3AC8B34829A780AC0063A7AA /* SignUpView.swift in Sources */,
 				3AA2E11F29A76F0A00ACCB5B /* FirebaseLoginApp.swift in Sources */,
 				3A9284BC29B3AB7300442B5B /* TextFieldModifier.swift in Sources */,
+				828BE3F12C9A07F800394264 /* RouteMapView.swift in Sources */,
 				3AC8B34629A77CF90063A7AA /* SignInView.swift in Sources */,
 				3AC8B34429A77A230063A7AA /* FirebaseLoginViewModel.swift in Sources */,
 				82B2CFF72C9948F900B58298 /* LocationManager.swift in Sources */,
+				828BE3EF2C9A07C900394264 /* DeviceSelectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

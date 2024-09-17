@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  FirebaseLogin
 //
-//  Created by Gilda on 23/02/23.
+//  Created by Jose on 23/02/23.
 //
 
 import SwiftUI
