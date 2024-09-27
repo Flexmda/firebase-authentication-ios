@@ -1,20 +1,16 @@
-//
-//  SignInView.swift
-//  FirebaseLogin
-//
-//  Created by Gilda on 23/02/23.
-//
-
 import SwiftUI
 
 struct SignUpView: View {
-    @EnvironmentObject var vm : FirebaseLoginViewModel
+    @EnvironmentObject var vm: FirebaseLoginViewModel
     // - user input(s):
     @State var mail: String = ""
     @State var password: String = ""
     // - to hide/show password
     @State var showPassword = false
-    
+    // - control para mostrar alertas
+    @State private var showAlert = false
+    @State private var alertMessage = ""
+
     var body: some View {
         VStack(alignment: .trailing, spacing: 32) {
             Spacer()
@@ -30,12 +26,9 @@ struct SignUpView: View {
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color(.systemGray6), ignoresSafeAreaEdges: .all)
-    }
-}
-
-struct SignUpView_Previews: PreviewProvider {
-    static var previews: some View {
-        SignUpView()
+        .alert(isPresented: $showAlert) {
+            Alert(title: Text("Registro"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+        }
     }
 }
 
@@ -50,8 +43,12 @@ extension SignUpView {
                 Text("Email")
                     .font(.caption2)
                 TextField("aquivasucorreo.com", text: $mail)
+                    .keyboardType(.emailAddress)
+                    .autocapitalization(.none)
+                    .padding()
+                    .background(Color.white)
+                    .cornerRadius(8)
             }
-            .modifier(InputField())
             .padding(.bottom, 4)
             // - field for password input
             VStack(alignment: .leading) {
@@ -62,6 +59,7 @@ extension SignUpView {
                         if showPassword {
                             // * show password
                             TextField("...", text: $password)
+                                .autocapitalization(.none)
                         } else {
                             // * hide password
                             SecureField("...", text: $password)
@@ -74,23 +72,41 @@ extension SignUpView {
                     }
                 }
             }
-            .modifier(InputField())
+            .padding()
+            .background(Color.white)
+            .cornerRadius(8)
         }
     }
     
     // MARK: Sign-up button
     @ViewBuilder
     func SignUpButton() -> some View {
-        VStack (alignment: .center, spacing: 16) {
+        VStack(alignment: .center, spacing: 16) {
             Button {
-                guard !mail.isEmpty, !password.isEmpty else { return }
-                vm.signUp(email: mail, password: password)
-                
+                guard !mail.isEmpty, !password.isEmpty else {
+                    alertMessage = "Por favor ingresa todos los campos."
+                    showAlert = true
+                    return
+                }
+                vm.signUp(email: mail, password: password) { success, errorMessage in
+                    if success {
+                        alertMessage = "Registro exitoso"
+                        showAlert = true
+                    } else {
+                        alertMessage = errorMessage ?? "Ocurrió un error al registrarse."
+                        showAlert = true
+                    }
+                }
             } label: {
                 Text("Crear una cuenta".uppercased())
-                    .modifier(OnButtonText())
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(Color.blue)
+                    .cornerRadius(8)
             }
-            .modifier(LargeButton())
+            .padding()
         }
     }
 }

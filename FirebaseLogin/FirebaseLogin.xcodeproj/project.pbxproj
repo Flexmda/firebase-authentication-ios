@@ -24,6 +24,8 @@
 		828BE3F72C9A0CDA00394264 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828BE3F62C9A0CD400394264 /* MenuView.swift */; };
 		82B2CFF42C99462C00B58298 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B2CFF32C99462C00B58298 /* MapView.swift */; };
 		82B2CFF72C9948F900B58298 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B2CFF62C9948F900B58298 /* LocationManager.swift */; };
+		82BAAE4D2CA64C660029CA30 /* UpdateUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BAAE4C2CA64C630029CA30 /* UpdateUserView.swift */; };
+		82BAAE4F2CA660D80029CA30 /* QRCodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BAAE4E2CA660D60029CA30 /* QRCodeScannerView.swift */; };
 		F128D113E003E6A6E851A4D9 /* Pods_FirebaseLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD60EF4B54B442E0D26A162C /* Pods_FirebaseLogin.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +51,8 @@
 		828BE3F62C9A0CD400394264 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		82B2CFF32C99462C00B58298 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		82B2CFF62C9948F900B58298 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		82BAAE4C2CA64C630029CA30 /* UpdateUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserView.swift; sourceTree = "<group>"; };
+		82BAAE4E2CA660D60029CA30 /* QRCodeScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerView.swift; sourceTree = "<group>"; };
 		CD60EF4B54B442E0D26A162C /* Pods_FirebaseLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseLogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -77,8 +81,10 @@
 			children = (
 				3AA2E12029A76F0A00ACCB5B /* ContentView.swift */,
 				828BE3F62C9A0CD400394264 /* MenuView.swift */,
+				82BAAE4C2CA64C630029CA30 /* UpdateUserView.swift */,
 				82B2CFF32C99462C00B58298 /* MapView.swift */,
 				828BE3F22C9A0BA700394264 /* MainMenuView.swift */,
+				82BAAE4E2CA660D60029CA30 /* QRCodeScannerView.swift */,
 				828BE3F42C9A0BD100394264 /* DeviceListView.swift */,
 				828BE3EE2C9A07C600394264 /* DeviceSelectionView.swift */,
 				828BE3F02C9A07F600394264 /* RouteMapView.swift */,
@@ -302,12 +308,14 @@
 				3AA2E12129A76F0A00ACCB5B /* ContentView.swift in Sources */,
 				3AC8B34829A780AC0063A7AA /* SignUpView.swift in Sources */,
 				3AA2E11F29A76F0A00ACCB5B /* FirebaseLoginApp.swift in Sources */,
+				82BAAE4F2CA660D80029CA30 /* QRCodeScannerView.swift in Sources */,
 				3A9284BC29B3AB7300442B5B /* TextFieldModifier.swift in Sources */,
 				828BE3F32C9A0BA900394264 /* MainMenuView.swift in Sources */,
 				828BE3F72C9A0CDA00394264 /* MenuView.swift in Sources */,
 				828BE3F52C9A0BD200394264 /* DeviceListView.swift in Sources */,
 				828BE3F12C9A07F800394264 /* RouteMapView.swift in Sources */,
 				3AC8B34629A77CF90063A7AA /* SignInView.swift in Sources */,
+				82BAAE4D2CA64C660029CA30 /* UpdateUserView.swift in Sources */,
 				3AC8B34429A77A230063A7AA /* FirebaseLoginViewModel.swift in Sources */,
 				82B2CFF72C9948F900B58298 /* LocationManager.swift in Sources */,
 				828BE3EF2C9A07C900394264 /* DeviceSelectionView.swift in Sources */,

@@ -1,25 +1,20 @@
-//
-//  ContentView.swift
-//  FirebaseLogin
-//
-//  Created by Jose on 23/02/23.
-//
-
 import SwiftUI
+import FirebaseAuth
 
 struct ContentView: View {
     @EnvironmentObject var vm: FirebaseLoginViewModel
-    @State private var showingMenu = false // Para controlar el menú
+    @State private var showingMenu = false  // Controla la visibilidad del menú
 
     var body: some View {
         NavigationView {
+            // Verifica si el usuario ha iniciado sesión
             if vm.signedIn {
                 ZStack {
-                    // Mostrar el mapa después de iniciar sesión
+                    // Mostrar el mapa si está autenticado
                     MapView()
-                        .edgesIgnoringSafeArea(.all) // Para que el mapa ocupe toda la pantalla
+                        .edgesIgnoringSafeArea(.all)
 
-                    // Botón para mostrar el menú
+                    // Botón para abrir el menú
                     VStack {
                         HStack {
                             Spacer()
@@ -37,15 +32,18 @@ struct ContentView: View {
                     }
                 }
             } else {
-                // Si no está logueado, muestra la pantalla de inicio de sesión
+                // Mostrar la vista de inicio de sesión si el usuario no está autenticado
                 SignInView()
             }
         }
         .onAppear {
-            vm.signedIn = vm.isSignedIn
+            // Escucha cambios en el estado de autenticación
+            vm.listenToAuthState()
         }
         .sheet(isPresented: $showingMenu) {
+            // Presenta el menú
             MenuView(showingMenu: $showingMenu, deviceId: UIDevice.current.identifierForVendor?.uuidString ?? "unknown_device")
+                .environmentObject(vm)  // Pasamos el ViewModel al menú
         }
     }
 }
