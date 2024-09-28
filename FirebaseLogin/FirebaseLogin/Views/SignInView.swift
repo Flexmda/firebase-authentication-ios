@@ -18,7 +18,7 @@ struct SignInView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 32) {
             Spacer()
-            Text("Wenas\nmi amor!")
+            Text("Wenas\n tu!")
                 .multilineTextAlignment(.leading)
                 .font(.largeTitle)
                 .fontWeight(.black)
@@ -51,7 +51,7 @@ extension SignInView {
             VStack(alignment: .leading) {
                 Text("Email")
                     .font(.caption2)
-                TextField("amordemivida@gmail.com", text: $mail)
+                TextField("correo@gmail.com", text: $mail)
             }
             .modifier(InputField())
             .padding(.bottom, 4)
@@ -100,7 +100,7 @@ extension SignInView {
     func SignUpLink() -> some View {
         HStack {
             Text("Primera vez?")
-            NavigationLink("Regístrese amor!", destination: SignUpView())
+            NavigationLink("Regístrese aquí!", destination: SignUpView())
         }
     }
 }
